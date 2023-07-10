@@ -1,0 +1,36 @@
+import { StyleSheet, StatusBar } from 'react-native';
+
+export const styles = StyleSheet.create({
+  safeArea: {
+    flex: 1,
+  },
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    marginHorizontal: 20,
+    paddingTop: StatusBar.currentHeight,
+  },
+  containerItem: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingVertical: 20,
+    backgroundColor: '#D4D7ED',
+    paddingHorizontal: 10,
+    borderRadius: 10,
+    color: '#212121',
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 1,
+    },
+    shadowOpacity: 0.22,
+    shadowRadius: 2.22,
+    elevation: 3,
+  },
+  listItem: {
+    fontSize: 15,
+    fontWeight: 'bold',
+    color: '#212121',
+  },
+});
