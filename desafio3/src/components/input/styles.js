@@ -12,6 +12,7 @@ export const styles = StyleSheet.create({
     borderRadius: 10,
     color: COLORS.black,
     fontSize: 14,
+    fontFamily: 'Poppins-Regular',
     paddingHorizontal: 10,
   },
 });

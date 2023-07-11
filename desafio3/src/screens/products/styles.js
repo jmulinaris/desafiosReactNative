@@ -20,18 +20,24 @@ const styles = StyleSheet.create({
   goBackText: {
     fontSize: 14,
     color: COLORS.text,
+    fontFamily: 'Poppins-Regular',
   },
   products: {
     flex: 1,
   },
+  productList: {
+    fontFamily: 'Poppins-Regular',
+  },
   notFound: {
     flex: 1,
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
     alignItems: 'center',
+    paddingBottom: 200,
   },
   notFoundText: {
     color: 'red',
     fontSize: 18,
+    fontFamily: 'Poppins-Regular',
   },
 });
 

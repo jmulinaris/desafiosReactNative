@@ -7,7 +7,7 @@ import { Input } from '../../components';
 import PRODUCTS from '../../constants/data/products.json';
 import { COLORS } from '../../themes';
 
-const Product = ({ onHandleGoBack, categoryId }) => {
+const Products = ({ onHandleGoBack, categoryId }) => {
   const [search, setSearch] = useState('');
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [borderColor, setBorderColor] = useState(COLORS.secondary);
@@ -61,7 +61,7 @@ const Product = ({ onHandleGoBack, categoryId }) => {
       </View>
       <FlatList
         data={search.length > 0 ? filteredProducts : filteredProductsByCategory}
-        renderItem={({ item }) => <Text>{item.name}</Text>}
+        renderItem={({ item }) => <Text style={styles.productList}>{item.name}</Text>}
         keyExtractor={(item) => item.id.toString()}
         style={styles.products}
       />
@@ -74,4 +74,4 @@ const Product = ({ onHandleGoBack, categoryId }) => {
   );
 };
 
-export default Product;
+export default Products;
