@@ -5,7 +5,7 @@ Proyecto de desarrollo de aplicaciones con React Native realizado en el curso de
 
 - ___Primer entrega___: Desplegar el proyecto en el emulador
 - ___Segunda entrega___: Crear una lista optimizada que permita agregar items y eliminarlos. Utilizamos FlatList y Modal. 
-
+- ___Tercer entrega___: Creamos la vista de categorías y productos que permite filtrar. Se traen los datos de archivos .json. Se importan colores y fuentes de archivos separados.
 
 
 ## __Run Locally__
