@@ -3,9 +3,10 @@
 
 Proyecto de desarrollo de aplicaciones con React Native realizado en el curso de Coderhouse.
 
-- ___Primer entrega___: Desplegar el proyecto en el emulador
-- ___Segunda entrega___: Crear una lista optimizada que permita agregar items y eliminarlos. Utilizamos FlatList y Modal. 
-- ___Tercer entrega___: Creamos la vista de categorías y productos que permite filtrar. Se traen los datos de archivos .json. Se utilizan colores como variables y fuente externa.
+- ___Desafío 1___: Desplegar el proyecto en el emulador.
+- ___Desafío 2___: Crear una lista optimizada que permita agregar items y eliminarlos. Utilizamos FlatList y Modal. 
+- ___Desafío 3___: Creamos la vista de categorías y productos que permite filtrar. Se traen los datos de archivos .json. Se utilizan colores como variables y fuente externa.
+- ___Desafío 4___: Agregamos React Navigation para la navegación entre pantallas.
 
 
 ## __Run Locally__

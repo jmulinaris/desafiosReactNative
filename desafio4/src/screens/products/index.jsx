@@ -7,7 +7,8 @@ import { Input } from '../../components';
 import PRODUCTS from '../../constants/data/products.json';
 import { COLORS } from '../../themes';
 
-const Products = ({ onHandleGoBack, categorySelected }) => {
+const Products = ({ navigation, route }) => {
+  const { categoryId, color } = route.params;
   const [search, setSearch] = useState('');
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [borderColor, setBorderColor] = useState(COLORS.grey);
@@ -22,7 +23,7 @@ const Products = ({ onHandleGoBack, categorySelected }) => {
   const onHandleFocus = () => {};
 
   const filteredProductsByCategory = PRODUCTS.filter(
-    (product) => product.categoryId === categorySelected.categoryId
+    (product) => product.categoryId === categoryId
   );
 
   const filterBySearch = (query) => {
@@ -42,10 +43,6 @@ const Products = ({ onHandleGoBack, categorySelected }) => {
 
   return (
     <View style={styles.container}>
-      <TouchableOpacity style={styles.goBack} onPress={onHandleGoBack}>
-        <Ionicons name="arrow-back-circle" size={40} color={COLORS.text} />
-        <Text style={styles.goBackText}>Go back</Text>
-      </TouchableOpacity>
       <View style={styles.header}>
         <Input
           onHandleBlur={onHandleBlur}
@@ -72,7 +69,7 @@ const Products = ({ onHandleGoBack, categorySelected }) => {
           <TouchableOpacity onPress={() => null} style={styles.productContainer}>
             <ImageBackground
               source={{ uri: item.image }}
-              style={[styles.productImage, { backgroundColor: categorySelected.color }]}
+              style={[styles.productImage, { backgroundColor: color }]}
               resizeMethod="resize"
               resizeMode="contain"
             />
