@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     //backgroundColor: COLORS.background,
-    fontFamily: 'Poppins-Regular',
+    fontFamily: FONTS.regular,
   },
   loaderContainer: {
     justifyContent: 'center',

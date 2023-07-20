@@ -6,20 +6,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingHorizontal: 15,
+    paddingTop: 30,
     backgroundColor: COLORS.background,
-  },
-  header: {
-    marginTop: 30,
-  },
-  goBack: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    paddingVertical: 10,
-  },
-  goBackText: {
-    fontSize: 14,
-    color: COLORS.text,
-    fontFamily: 'Poppins-Regular',
   },
   products: {
     flex: 1,
