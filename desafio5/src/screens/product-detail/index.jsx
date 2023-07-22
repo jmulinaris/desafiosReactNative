@@ -4,7 +4,7 @@ import styles from './style';
 import PRODUCTS from '../../constants/data/products.json';
 
 const ProductDetail = ({ navigation, route }) => {
-  const { color, productId } = route.params;
+  const { productId } = route.params;
 
   const product = PRODUCTS.find((product) => product.id === productId);
 
