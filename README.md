@@ -42,6 +42,14 @@ Teconologías utilizadas en el proyecto:
 * [expo]: Version 48.0.18
 * [react]: Version 18.2.0
 * [react-native]: Version 0.71.8
+* [react-navigation/native]: Version 6.1.7
+* [react-navigation/native-stack]: Version 6.9.13
+* [react-navigation/stack]: Version 6.3.17
+* [expo-font]: Version 11.1.1
+* [expo-screen-orientation]: Version 5.1.1
+* [expo-status-bar]: Version 1.4.4
+* [react-native-safe-area-context]: Version 4.5.0
+* [react-native-screens]: Version 3.20.0
 
 
 
