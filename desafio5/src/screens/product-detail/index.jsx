@@ -1,12 +1,20 @@
-import { View, Text, Image, Button } from 'react-native';
+import { View, Text, Image, TouchableOpacity } from 'react-native';
+import { useSelector, useDispatch } from 'react-redux';
 
 import styles from './style';
-import PRODUCTS from '../../constants/data/products.json';
+import { addToCart } from '../../store/cart/cart.slice';
 
 const ProductDetail = ({ navigation, route }) => {
+  const dispatch = useDispatch();
   const { productId } = route.params;
 
-  const product = PRODUCTS.find((product) => product.id === productId);
+  const products = useSelector((state) => state.products.data);
+
+  const product = products.find((product) => product.id === productId);
+
+  const onAddToCart = () => {
+    dispatch(addToCart(product));
+  };
 
   return (
     <View style={styles.container}>
@@ -15,7 +23,6 @@ const ProductDetail = ({ navigation, route }) => {
         <Text style={styles.productName}>{product.name}</Text>
         <Text style={styles.productDescription}>{product.description}</Text>
         <Text style={styles.productPrice}>{`${product.currency.code} ${product.price}`}</Text>
-        <Button title="Agregar al carrito" style={styles.button} onPress={() => null} />
       </View>
       <Text style={styles.tagTitle}>Tags</Text>
       <View style={styles.containerTags}>
@@ -24,6 +31,11 @@ const ProductDetail = ({ navigation, route }) => {
             <Text style={styles.tag}>{tag}</Text>
           </View>
         ))}
+      </View>
+      <View style={styles.containerButton}>
+        <TouchableOpacity style={styles.addToCartButton} onPress={onAddToCart}>
+          <Text style={styles.addToCartText}>Add to cart</Text>
+        </TouchableOpacity>
       </View>
     </View>
   );

@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
   },
   containerTag: {
     padding: 5,
-    marginLeft: 10,
+    marginLeft: 15,
   },
   tag: {
     color: 'grey',
@@ -49,6 +49,22 @@ const styles = StyleSheet.create({
   containerTags: {
     flexDirection: 'row',
     gap: 5,
+  },
+  containerButton: {
+    marginTop: 40,
+    marginHorizontal: 20,
+  },
+  addToCartButton: {
+    width: '100%',
+    backgroundColor: COLORS.primary,
+    padding: 15,
+    borderRadius: 5,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  addToCartText: {
+    fontFamily: FONTS.medium,
+    fontSize: 16,
   },
 });
 

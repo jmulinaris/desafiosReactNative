@@ -5,8 +5,9 @@ Proyecto de desarrollo de aplicaciones con React Native realizado en el curso de
 
 - ___Desafío 1___: Desplegar el proyecto en el emulador.
 - ___Desafío 2___: Crear una lista optimizada que permita agregar items y eliminarlos. Utilizamos FlatList y Modal. 
-- ___Desafío 3___: Creamos la vista de categorías y productos que permite filtrar. Se traen los datos de archivos .json. Se utilizan colores como variables y fuente externa.
-- ___Desafío 4___: Agregamos React Navigation para la navegación entre pantallas.
+- ___Desafío 3___: Creo la vista de categorías y productos que permite filtrar. Se traen los datos de archivos .json. Se utilizan colores como variables y fuente externa.
+- ___Desafío 4___: Agrego React Navigation para la navegación entre pantallas.
+- ___Desafío 5___: Agrego Tab Navigation. Implemento redux y avanzo en la funcionalidad de agregar al carrito.
 
 
 ## __Run Locally__
@@ -50,6 +51,8 @@ Teconologías utilizadas en el proyecto:
 * [expo-status-bar]: Version 1.4.4
 * [react-native-safe-area-context]: Version 4.5.0
 * [react-native-screens]: Version 3.20.0
+* [reduxjs/toolkit]: Version 1.9.5
+* [react-redux]: Version 8.1.1
 
 
 
