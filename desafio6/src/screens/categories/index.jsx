@@ -1,10 +1,11 @@
-import { FlatList, SafeAreaView, View } from 'react-native';
+import { ActivityIndicator, FlatList, SafeAreaView, View } from 'react-native';
 
 import styles from './styles';
 import { CategoryItem } from '../../components';
 import { ORIENTATION } from '../../constants/orientation';
 import useOrientation from '../../hooks/useOrientation';
 import { useGetCategoriesQuery } from '../../store/categories/api';
+import { COLORS } from '../../themes';
 
 const Categories = ({ navigation }) => {
   const { data, error, isLoading } = useGetCategoriesQuery();
@@ -14,6 +15,13 @@ const Categories = ({ navigation }) => {
   const onSelectCategory = ({ categoryId, color, name }) => {
     navigation.navigate('Products', { categoryId, color, name });
   };
+
+  if (isLoading)
+    return (
+      <View style={styles.containerLoader}>
+        <ActivityIndicator size="large" color={COLORS.primary} />
+      </View>
+    );
 
   return (
     <SafeAreaView style={styles.container}>

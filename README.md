@@ -8,6 +8,7 @@ Proyecto de desarrollo de aplicaciones con React Native realizado en el curso de
 - ___Desafío 3___: Creo la vista de categorías y productos que permite filtrar. Se traen los datos de archivos .json. Se utilizan colores como variables y fuente externa.
 - ___Desafío 4___: Agrego React Navigation para la navegación entre pantallas.
 - ___Desafío 5___: Agrego Tab Navigation. Implemento redux y avanzo en la funcionalidad de agregar al carrito.
+- ___Desafío 6___: Implementamos firebase realtime database.
 
 
 ## __Run Locally__
