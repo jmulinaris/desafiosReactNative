@@ -9,6 +9,12 @@ const styles = StyleSheet.create({
     paddingTop: 30,
     backgroundColor: COLORS.background,
   },
+  containerLoader: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: COLORS.background,
+  },
   products: {
     flex: 1,
   },
