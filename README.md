@@ -22,7 +22,7 @@ Clonar el repo:
 Ir al directorio del proyecto:
 
 ```bash
-  cd reactNative
+  cd desafiosReactNative
 ```
 
 Instalar dependencias:
