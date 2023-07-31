@@ -55,7 +55,7 @@ const TabsNavigator = () => {
         }}
       />
       <BottomTab.Screen
-        name="OrderTab"
+        name="OrdersTab"
         component={OrdersNavigator}
         options={{
           tabBarLabel: 'Orders',

@@ -6,6 +6,23 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
+  emptyCartContainer: {
+    flex: 1,
+    backgroundColor: COLORS.background,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  emptyCartText: {
+    fontFamily: FONTS.regular,
+    color: 'red',
+    fontSize: 16,
+  },
+  containerLoader: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: COLORS.background,
+  },
   listContainer: {
     flex: 1,
     backgroundColor: COLORS.background,
