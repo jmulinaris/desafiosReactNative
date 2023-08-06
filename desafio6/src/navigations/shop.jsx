@@ -1,6 +1,6 @@
 import { Ionicons } from '@expo/vector-icons';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { TouchableOpacity } from 'react-native';
+import { TouchableOpacity, StyleSheet } from 'react-native';
 
 import SettingsNavigator from './settings';
 import { Categories, Products, ProductDetail } from '../screens';
@@ -54,25 +54,19 @@ const ShopNavigator = () => {
       <Stack.Screen
         name="SettingsStack"
         component={SettingsNavigator}
-        options={({ navigation }) => ({
-          headerLeft: () => (
-            <TouchableOpacity style={styles.goBack} onPress={() => navigation.goBack()}>
-              <Ionicons name="arrow-back" size={30} color={COLORS.text} />
-            </TouchableOpacity>
-          ),
-          title: 'Settings',
-          headerRight: null,
+        options={() => ({
+          headerShown: false,
         })}
       />
     </Stack.Navigator>
   );
 };
 
-const styles = {
+const styles = StyleSheet.create({
   goBack: {
     flexDirection: 'row',
     alignItems: 'center',
   },
-};
+});
 
 export default ShopNavigator;
