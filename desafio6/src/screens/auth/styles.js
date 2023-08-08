@@ -11,6 +11,7 @@ const styles = StyleSheet.create({
   },
   content: {
     width: '80%',
+    minHeight: 360,
     maxWidth: 400,
     margin: 15,
     padding: 15,
@@ -34,19 +35,6 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     paddingVertical: 10,
   },
-  label: {
-    fontFamily: FONTS.light,
-    fontSize: 14,
-    textAlign: 'left',
-  },
-  input: {
-    height: 45,
-    borderBottomColor: COLORS.primary,
-    borderBottomWidth: 1,
-    width: '90%',
-    fontFamily: FONTS.regular,
-    marginBottom: 5,
-  },
   linkContainer: {
     justifyContent: 'center',
     alignItems: 'center',
@@ -66,6 +54,14 @@ const styles = StyleSheet.create({
   },
   button: {
     backgroundColor: COLORS.secondary,
+    width: '80%',
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 5,
+    height: 40,
+  },
+  buttonDisabled: {
+    backgroundColor: COLORS.mediumgrey,
     width: '80%',
     alignItems: 'center',
     justifyContent: 'center',

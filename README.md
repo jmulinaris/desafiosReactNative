@@ -8,7 +8,8 @@ Proyecto de desarrollo de aplicaciones con React Native realizado en el curso de
 - ___Desafío 3___: Creo la vista de categorías y productos que permite filtrar. Se traen los datos de archivos .json. Se utilizan colores como variables y fuente externa.
 - ___Desafío 4___: Agrego React Navigation para la navegación entre pantallas.
 - ___Desafío 5___: Agrego Tab Navigation. Implemento redux y avanzo en la funcionalidad de agregar al carrito.
-- ___Desafío 6___: Implementamos Firebase realtime database. Login y autenticación con Firebase.
+- ___Desafío 6___: Implementamos Firebase realtime database. Login y autenticación con Firebase. Funcionalidad del perfil que permite sacar una foto con la cámara y también se guarda en Firebase.
+Validación de email y contraseña del formulario de Login. 
 
 
 ## __Run Locally__

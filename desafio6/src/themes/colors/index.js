@@ -8,4 +8,5 @@ export const COLORS = {
   grey: '#586074',
   mediumgrey: '#CCCCCC',
   ligthgrey: '#F4F6F5',
+  error: '#E23428',
 };
