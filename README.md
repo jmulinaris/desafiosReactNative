@@ -54,6 +54,7 @@ Teconologías utilizadas en el proyecto:
 * [react-native-screens]: Version 3.20.0
 * [reduxjs/toolkit]: Version 1.9.5
 * [react-redux]: Version 8.1.1
+* [expo-image-picker]: Version 14.1.1
 
 
 
