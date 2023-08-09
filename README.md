@@ -9,7 +9,8 @@ Proyecto de desarrollo de aplicaciones con React Native realizado en el curso de
 - ___Desafío 4___: Agrego React Navigation para la navegación entre pantallas.
 - ___Desafío 5___: Agrego Tab Navigation. Implemento redux y avanzo en la funcionalidad de agregar al carrito.
 - ___Desafío 6___: Implementamos Firebase realtime database. Login y autenticación con Firebase. Funcionalidad del perfil que permite sacar una foto con la cámara y también se guarda en Firebase.
-Validación de email y contraseña del formulario de Login. 
+Validación de email y contraseña del formulario de Login.
+Domicilio dentro del perfil utilizando la location de Expo y la API de Google Maps. 
 
 
 ## __Run Locally__
@@ -56,6 +57,7 @@ Teconologías utilizadas en el proyecto:
 * [reduxjs/toolkit]: Version 1.9.5
 * [react-redux]: Version 8.1.1
 * [expo-image-picker]: Version 14.1.1
+* [expo-location]: Version 15.1.1
 
 
 

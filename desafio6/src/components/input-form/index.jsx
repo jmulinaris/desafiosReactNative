@@ -1,7 +1,6 @@
 import { View, Text, TextInput } from 'react-native';
 
 import styles from './styles';
-
 import Label from '../label';
 
 const InputForm = ({
