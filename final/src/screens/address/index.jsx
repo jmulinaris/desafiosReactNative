@@ -8,7 +8,7 @@ import { insertPlace } from '../../db';
 import { useLazyGetGeocodingQuery } from '../../store/maps/api';
 import { useUpdateAddressMutation } from '../../store/settings/api';
 
-const CreateAddress = ({ navigation }) => {
+const Address = ({ navigation }) => {
   const localId = useSelector((state) => state.auth.user.localId);
   const mapImageUrl = useSelector((state) => state.address.mapImageUrl);
   const [location, setLocation] = useState(null);
@@ -43,4 +43,4 @@ const CreateAddress = ({ navigation }) => {
   );
 };
 
-export default CreateAddress;
+export default Address;

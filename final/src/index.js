@@ -8,9 +8,7 @@ import { store } from './store';
 import { COLORS, FONTS } from './themes';
 
 init()
-  .then(() => {
-    console.log('Initialized database');
-  })
+  .then(() => {})
   .catch((err) => {
     console.log('Initializing db failed');
     console.log(err);

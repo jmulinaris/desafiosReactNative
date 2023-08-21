@@ -1,5 +1,5 @@
 import { getCurrentPositionAsync, requestForegroundPermissionsAsync } from 'expo-location';
-import {useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { View, Text, Alert, TouchableOpacity } from 'react-native';
 import { useDispatch } from 'react-redux';
 
