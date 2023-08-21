@@ -1,12 +1,12 @@
 import { getCurrentPositionAsync, requestForegroundPermissionsAsync } from 'expo-location';
-import { useDebugValue, useEffect, useState } from 'react';
+import {useEffect, useState } from 'react';
 import { View, Text, Alert, TouchableOpacity } from 'react-native';
+import { useDispatch } from 'react-redux';
 
 import styles from './styles';
 import { URL_MAPS } from '../../constants/maps';
-import MapPreview from '../map-preview';
-import { useDispatch } from 'react-redux';
 import { saveMapImageUrl } from '../../store/address/address.slice';
+import MapPreview from '../map-preview';
 
 const LocationSelector = ({ onLocation }) => {
   const dispatch = useDispatch();
@@ -27,7 +27,9 @@ const LocationSelector = ({ onLocation }) => {
     return true;
   };
 
-  const mapPreviewUrlImage = pickedLocation ? URL_MAPS({ lat: pickedLocation.lat, lng:pickedLocation.lng , zoom: 14 }) : ''
+  const mapPreviewUrlImage = pickedLocation
+    ? URL_MAPS({ lat: pickedLocation.lat, lng: pickedLocation.lng, zoom: 14 })
+    : '';
 
   const onHandlerGetLocation = async () => {
     const isLocationPermission = await verifyPermissions();

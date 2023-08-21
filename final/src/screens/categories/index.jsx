@@ -34,7 +34,6 @@ const Categories = ({ navigation }) => {
               onSelectCategory={() =>
                 onSelectCategory({
                   categoryId: item.id,
-                  //color: item.backgroundColor,
                   name: item.name,
                 })
               }

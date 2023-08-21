@@ -29,7 +29,6 @@ const ProductDetail = ({ navigation, route }) => {
     <View style={styles.container}>
       <Image source={{ uri: product.image }} style={styles.image} resizeMode="contain" />
       <View style={styles.content}>
-        <Text style={styles.productName}>{product.name}</Text>
         <Text style={styles.productDescription}>{product.description}</Text>
         <Text style={styles.productPrice}>{`${product.currency.code} ${product.price}`}</Text>
       </View>

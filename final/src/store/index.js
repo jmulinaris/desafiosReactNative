@@ -6,17 +6,13 @@ import { authApi } from './auth/api';
 import authReducer from './auth/auth.slice';
 import cartReducer from './cart/cart.slice';
 import { categoriesApi } from './categories/api';
-import categoriesReducer from './categories/categories.slice';
 import { mapsApi } from './maps/api';
 import { ordersApi } from './orders/api';
 import { productsApi } from './products/api';
-import productsReducer from './products/products.slice';
 import { settingsApi } from './settings/api';
 
 export const store = configureStore({
   reducer: {
-    products: productsReducer,
-    categories: categoriesReducer,
     cart: cartReducer,
     auth: authReducer,
     address: addressReducer,

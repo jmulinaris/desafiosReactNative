@@ -1,59 +1,46 @@
-import { useFocusEffect } from '@react-navigation/native';
-import { useCallback, useState } from 'react';
-import { View, Text, TouchableOpacity, FlatList, Image } from 'react-native';
+import { useState } from 'react';
+import { View, TouchableOpacity, Text } from 'react-native';
+import { useSelector } from 'react-redux';
 
 import styles from './styles';
-import { selectPlaces } from '../../db/index';
+import { LocationSelector } from '../../components';
+import { insertPlace } from '../../db';
+import { useLazyGetGeocodingQuery } from '../../store/maps/api';
+import { useUpdateAddressMutation } from '../../store/settings/api';
 
-const Address = ({ navigation }) => {
-  const [places, setPlaces] = useState([]);
+const CreateAddress = ({ navigation }) => {
+  const localId = useSelector((state) => state.auth.user.localId);
+  const mapImageUrl = useSelector((state) => state.address.mapImageUrl);
+  const [location, setLocation] = useState(null);
+  const [updateAddress] = useUpdateAddressMutation();
+  const [getGeoLocation] = useLazyGetGeocodingQuery();
 
-  const handlePress = () => {
-    navigation.navigate('CreateAddress');
+  const onLocation = ({ lat, lng }) => {
+    setLocation({ lat, lng });
   };
 
-  useFocusEffect(
-    useCallback(() => {
-      const getPlaces = async () => {
-        const places = await selectPlaces();
-        setPlaces(places);
-      };
-      getPlaces();
-
-      return () => {
-        setPlaces([]);
-      };
-    }, [])
-  );
+  const onHandlerUpdateLocation = async () => {
+    const { lat, lng } = location;
+    const addressName = await getGeoLocation({ lat, lng });
+    await insertPlace({
+      address: addressName.data,
+      coords: location,
+      image: mapImageUrl,
+    });
+    updateAddress({ localId, address: addressName.data, location });
+    navigation.goBack();
+  };
 
   return (
     <View style={styles.container}>
-      <FlatList
-        data={places}
-        renderItem={({ item }) => {
-          const { lat, lng } = JSON.parse(item.coords);
-
-          return (
-            <View style={styles.itemContainer}>
-              <View style={styles.mapImageContainer}>
-                <Image source={{ uri: item.image }} style={styles.mapImage} />
-              </View>
-              <View style={styles.itemDetailContainer}>
-                <Text style={styles.itemAddress}>{item.address}</Text>
-                <Text style={styles.itemCoords}>{`Lat: ${lat} Lng: ${lng}`}</Text>
-              </View>
-            </View>
-          );
-        }}
-        keyExtractor={(item) => item.id.toString()}
-      />
-      <TouchableOpacity style={styles.floatingButton} onPress={handlePress}>
-        <View style={styles.floatingButtonTextContainer}>
-          <Text style={styles.floatingButtonText}>+</Text>
-        </View>
-      </TouchableOpacity>
+      <LocationSelector onLocation={onLocation} />
+      <View style={styles.buttonContainer}>
+        <TouchableOpacity onPress={onHandlerUpdateLocation} style={styles.button}>
+          <Text style={styles.buttonText}>Confirm</Text>
+        </TouchableOpacity>
+      </View>
     </View>
   );
 };
 
-export default Address;
+export default CreateAddress;

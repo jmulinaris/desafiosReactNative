@@ -44,7 +44,7 @@ export const selectPlaces = () => {
   const promise = new Promise((resolve, reject) => {
     db.transaction((tx) => {
       tx.executeSql(
-        'SELECT * FROM places',
+        `SELECT * FROM places`,
         [],
         (_, result) => {
           const places = result?.rows._array;
