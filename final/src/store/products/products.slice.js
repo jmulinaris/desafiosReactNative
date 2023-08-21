@@ -1,15 +1,15 @@
-import { createSlice } from '@reduxjs/toolkit';
+// import { createSlice } from '@reduxjs/toolkit';
 
-import PRODUCTS from '../../constants/data/products.json';
+// import PRODUCTS from '../../constants/data/products.json';
 
-const initialState = {
-  data: PRODUCTS,
-};
+// const initialState = {
+//   data: PRODUCTS,
+// };
 
-const productsSlice = createSlice({
-  name: 'products',
-  initialState,
-  reducers: {},
-});
+// const productsSlice = createSlice({
+//   name: 'products',
+//   initialState,
+//   reducers: {},
+// });
 
-export default productsSlice.reducer;
+// export default productsSlice.reducer;

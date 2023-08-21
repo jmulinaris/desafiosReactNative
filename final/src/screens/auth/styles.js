@@ -33,8 +33,8 @@ const styles = StyleSheet.create({
     borderRadius: 5,
   },
   header: {
-    fontFamily: FONTS.medium,
-    fontSize: 16,
+    fontFamily: FONTS.bold,
+    fontSize: 20,
     textAlign: 'center',
     paddingVertical: 10,
   },

@@ -21,12 +21,9 @@ export const styles = StyleSheet.create({
     justifyContent: 'flex-end',
   },
   categoryName: {
-    fontSize: 20,
+    fontSize: 23,
     fontFamily: 'Poppins-Bold',
     color: COLORS.white,
     padding: 20,
-    textShadowColor: 'rgba(0,0,0,0.75)',
-    textShadowOffset: { width: -1, height: 1 },
-    textShadowRadius: 6,
   },
 });

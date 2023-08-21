@@ -15,7 +15,7 @@ const OrderItem = ({ id, total, createAt, items }) => {
       </View>
       <View style={styles.orderBody}>
         <Text style={styles.orderItemId}>ID: {id}</Text>
-        <Text style={styles.orderItemTotal}>Total: USD {total} </Text>
+        <Text style={styles.orderItemTotal}>Total: $ {total} </Text>
         <Text style={styles.orderItems}>Items: {items.length}</Text>
       </View>
     </TouchableOpacity>

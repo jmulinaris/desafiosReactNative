@@ -16,8 +16,10 @@ const Cart = ({ navigation }) => {
   const dispatch = useDispatch();
   const cart = useSelector((state) => state.cart.items);
   const total = useSelector((state) => state.cart.total);
+  const localId = useSelector((state) => state.auth.user.localId);
+  const userEmail = useSelector((state) => state.auth.user.email);
 
-  const [createOrder, { data, error, isLoading }] = useCreateOrderMutation();
+  const [createOrder, { error, isLoading }] = useCreateOrderMutation();
 
   if (isLoading)
     return (
@@ -44,21 +46,10 @@ const Cart = ({ navigation }) => {
       items: cart,
       total,
       user: {
-        id: 1,
-        name: 'Juli',
-        address: '123 street',
-        phone: '12456778',
-        email: 'juli@gmail.com',
-      },
-      payment: {
-        method: 'Visa',
-      },
-      delivery: {
-        method: 'UPS',
-        trackingNumber: Math.floor(Math.random() * 1000),
+        id: localId,
+        email: userEmail,
       },
       createAt: Date.now(),
-      finishedAt: '',
     };
     try {
       await createOrder(newOrder);
@@ -97,7 +88,7 @@ const Cart = ({ navigation }) => {
           <Text style={styles.checkoutButtonText}>Checkout</Text>
           <View style={styles.totalContainer}>
             <Text style={styles.totalText}>Total:</Text>
-            <Text style={styles.totalPriceText}>USD {total}</Text>
+            <Text style={styles.totalPriceText}>$ {total}</Text>
           </View>
         </TouchableOpacity>
       </View>

@@ -5,7 +5,7 @@ import { FONTS, COLORS } from '../../themes';
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: COLORS.background,
+    backgroundColor: COLORS.white,
   },
   containerLoader: {
     flex: 1,
@@ -14,6 +14,7 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.background,
   },
   image: {
+    marginTop: 15,
     width: '100%',
     height: 300,
   },

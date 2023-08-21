@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
     marginTop: 6,
   },
   productContainer: {
-    backgroundColor: COLORS.ligthgrey,
+    backgroundColor: COLORS.white,
     borderRadius: 10,
     width: '45%',
     marginHorizontal: 10,
