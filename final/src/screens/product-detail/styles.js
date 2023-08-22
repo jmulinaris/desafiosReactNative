@@ -33,9 +33,10 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
   productDescription: {
-    fontSize: 15,
+    fontSize: 16,
     marginTop: 10,
     paddingHorizontal: 15,
+    fontFamily: FONTS.regular,
   },
   button: {
     color: 'red',
