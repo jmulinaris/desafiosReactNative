@@ -1,4 +1,4 @@
-import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
+import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/dist/query/react';
 
 import { URL_BASE_FIREBASE_REALTIME_DATABASE } from '../../../constants/firebase';
 
@@ -24,7 +24,10 @@ export const settingsApi = createApi({
       query: ({ localId, address, location }) => ({
         url: `/users/${localId}.json`,
         method: 'PATCH',
-        body: { address, location },
+        body: {
+          address,
+          location,
+        },
       }),
     }),
   }),

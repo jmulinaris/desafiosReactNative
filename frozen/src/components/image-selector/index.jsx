@@ -1,6 +1,6 @@
 import { Ionicons } from '@expo/vector-icons';
 import { requestCameraPermissionsAsync, launchCameraAsync } from 'expo-image-picker';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { View, TouchableOpacity, Image, Alert } from 'react-native';
 
 import styles from './styles';
@@ -37,7 +37,7 @@ const ImageSelector = ({ profileImage, onSelect }) => {
   return (
     <View style={styles.container}>
       <TouchableOpacity style={styles.content} onPress={onHandleTakePhoto}>
-        {image || profileImage ? (
+        {profileImage || image ? (
           <Image
             source={{ uri: image || profileImage }}
             style={styles.image}
