@@ -33,15 +33,13 @@ const Address = ({ navigation }) => {
       <FlatList
         data={lastPlace}
         renderItem={({ item }) => {
-          const { lat, lng } = JSON.parse(item.coords);
           return (
             <View style={styles.itemContainer}>
               <View style={styles.mapImageContainer}>
                 <Image source={{ uri: item.image }} style={styles.mapImage} />
               </View>
               <View style={styles.itemDetailsContainer}>
-                <Text style={styles.itemAddress}>{item.address}</Text>
-                <Text style={styles.itemCoords}>{`Lat: ${lat} Lng: ${lng}`}</Text>
+                <Text>{item.address}</Text>
               </View>
             </View>
           );

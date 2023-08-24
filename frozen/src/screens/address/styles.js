@@ -65,6 +65,4 @@ export const styles = StyleSheet.create({
     flex: 1,
     gap: 10,
   },
-  itemAddress: {},
-  itemCoords: {},
 });
