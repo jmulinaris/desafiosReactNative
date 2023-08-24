@@ -2,15 +2,11 @@ import { ActivityIndicator, FlatList, SafeAreaView, View } from 'react-native';
 
 import styles from './styles';
 import { CategoryItem } from '../../components';
-// import { ORIENTATION } from '../../constants/orientation';
-// import useOrientation from '../../hooks/useOrientation';
 import { useGetCategoriesQuery } from '../../store/categories/api';
 import { COLORS } from '../../themes';
 
 const Categories = ({ navigation }) => {
   const { data, error, isLoading } = useGetCategoriesQuery();
-
-  // const orientation = useOrientation();
 
   const onSelectCategory = ({ categoryId, color, name }) => {
     navigation.navigate('Products', { categoryId, color, name });
@@ -37,7 +33,6 @@ const Categories = ({ navigation }) => {
                   name: item.name,
                 })
               }
-              // style={orientation === ORIENTATION.LANDSCAPE ? styles.categoryItemLandscape : {}}
             />
           )}
           keyExtractor={(item) => item.id}
