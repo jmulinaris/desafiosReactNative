@@ -10,7 +10,7 @@ const ProductDetail = ({ navigation, route }) => {
   const dispatch = useDispatch();
   const { productId } = route.params;
 
-  const { data, isLoading, error } = useGetProductByIdQuery(productId);
+  const { data, isLoading } = useGetProductByIdQuery(productId);
 
   const product = data?.find((product) => product.id === productId);
 

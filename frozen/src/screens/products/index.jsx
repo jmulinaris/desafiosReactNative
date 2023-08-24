@@ -16,7 +16,7 @@ import { COLORS } from '../../themes';
 
 const Products = ({ navigation, route }) => {
   const { categoryId, color } = route.params;
-  const { data, error, isLoading } = useGetProductsByCategoryQuery(categoryId);
+  const { data, isLoading } = useGetProductsByCategoryQuery(categoryId);
   const [search, setSearch] = useState('');
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [borderColor, setBorderColor] = useState(COLORS.grey);

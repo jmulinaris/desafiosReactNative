@@ -26,16 +26,16 @@ Iniciar el proyecto:
   npm start
 ```
 
-Iniciar en el emulador de Android:
+Iniciar el proyecto en el emulador de Android:
 
 ```bash
-  npm start android
+  npm run android
 ```
 
-Iniciar en el emulador de IOS:
+Iniciar el proyecto en el emulador de IOS:
 
 ```bash
-  npm start ios
+  npm run ios
 ```
 
 

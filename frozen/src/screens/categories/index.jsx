@@ -6,7 +6,7 @@ import { useGetCategoriesQuery } from '../../store/categories/api';
 import { COLORS } from '../../themes';
 
 const Categories = ({ navigation }) => {
-  const { data, error, isLoading } = useGetCategoriesQuery();
+  const { data, isLoading } = useGetCategoriesQuery();
 
   const onSelectCategory = ({ categoryId, color, name }) => {
     navigation.navigate('Products', { categoryId, color, name });
