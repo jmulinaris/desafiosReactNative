@@ -4,7 +4,7 @@ import { View, Text, TouchableOpacity, Image } from 'react-native';
 import { FlatList } from 'react-native-gesture-handler';
 
 import { styles } from './styles';
-import { deletePlaces, selectPlaces } from '../../db/index';
+import { selectPlaces } from '../../db/index';
 
 const Address = ({ navigation }) => {
   const [places, setPlaces] = useState([]);
