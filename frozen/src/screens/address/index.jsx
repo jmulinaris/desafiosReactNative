@@ -26,12 +26,10 @@ const Address = ({ navigation }) => {
     }, [])
   );
 
-  const lastPlace = places.slice(-1);
-
   return (
     <View style={styles.container}>
       <FlatList
-        data={lastPlace}
+        data={places}
         renderItem={({ item }) => {
           return (
             <View style={styles.itemContainer}>
